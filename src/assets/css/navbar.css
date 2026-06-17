@@ -1,0 +1,189 @@
+.luxury-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0;
+  transition: var(--transition-smooth);
+  background: transparent;
+}
+
+.luxury-navbar.scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-nav);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.luxury-navbar.scrolled .navbar-brand,
+.luxury-navbar.scrolled .nav-link,
+.luxury-navbar.scrolled .navbar-icon-btn {
+  color: var(--color-charcoal) !important;
+}
+
+.luxury-navbar.scrolled .navbar-brand span {
+  color: var(--color-muted);
+}
+
+.luxury-navbar .navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--color-white) !important;
+  letter-spacing: 0.06em;
+  transition: var(--transition-smooth);
+}
+
+.luxury-navbar .navbar-brand span {
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.luxury-navbar.scrolled .navbar-brand:hover {
+  color: var(--color-gold) !important;
+}
+
+.luxury-navbar .navbar-brand:hover {
+  opacity: 0.85;
+}
+
+.luxury-navbar .nav-link {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding: 8px 14px !important;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.luxury-navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 14px;
+  right: 14px;
+  height: 1px;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.luxury-navbar .nav-link:hover::after,
+.luxury-navbar .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.luxury-navbar .nav-link:hover {
+  color: var(--color-gold-light) !important;
+}
+
+.luxury-navbar.scrolled .nav-link:hover {
+  color: var(--color-gold) !important;
+}
+
+.luxury-navbar .dropdown-menu {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 8px 0;
+  margin-top: 8px;
+  box-shadow: var(--shadow-card);
+}
+
+.luxury-navbar .dropdown-item {
+  color: var(--color-charcoal);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  transition: var(--transition-smooth);
+}
+
+.luxury-navbar .dropdown-item:hover {
+  background: var(--color-bg);
+  color: var(--color-gold);
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-icon-btn {
+  position: relative;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 1.05rem;
+  cursor: pointer;
+  padding: 10px;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-icon-btn:hover {
+  color: var(--color-gold-light);
+}
+
+.luxury-navbar.scrolled .navbar-icon-btn:hover {
+  color: var(--color-gold);
+}
+
+.icon-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: var(--color-gold);
+  color: var(--color-white);
+  font-size: 0.6rem;
+  font-weight: 600;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  padding: 6px 10px;
+}
+
+.luxury-navbar.scrolled .navbar-toggler {
+  border-color: var(--color-border) !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.luxury-navbar.scrolled .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(26, 24, 22, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.account-dropdown .dropdown-menu {
+  min-width: 180px;
+}
+
+.account-dropdown .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
